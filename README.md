@@ -21,7 +21,7 @@ Azure WebApp SSL Manager is an Azure Function that acquires and manages **free**
 
 Azure WebApp SSL Manager is an Azure Function that acquires and manages **free** SSL certificates for applications hosted on Azure Web Apps and Azure Function Apps
 
-Main Tasks perfomed:
+Main Tasks performed:
 
 - Order/Renewal of SSL certificates from [Let's Encrypt](https://letsencrypt.org/) free trusted CA
 - Validation of the order using Azure DNS TXT record
@@ -47,7 +47,7 @@ This project depends on few other project:
 
 ## Prerequisites
 
-In order to succesfully use this application, you need a number of Prerequisites.
+In order to successfully use this application, you need a number of Prerequisites.
 
 - Either:
   - At least one Azure Web App, with at least one custom domain assigned, running in Basic, Standard or Premium tier, OR
@@ -59,7 +59,7 @@ In order to succesfully use this application, you need a number of Prerequisites
 
 #### Service Principal
 
-You need to have a Service Principal to be able to performa management operations on Azure, like uploading the certificate to the App Service or managing the DNS Zone.
+You need to have a Service Principal to be able to perform a management operations on Azure, like uploading the certificate to the App Service or managing the DNS Zone.
 
 If you don't have a Service Principal, you can create one with the following command via Azure CLI. You can execute the command from any PC with the Azure CLI installed or from the [Azure Shell](http://shell.azure.com)
 
@@ -67,7 +67,7 @@ If you don't have a Service Principal, you can create one with the following com
 az ad sp create-for-rbac
 ```
 
-You need to have enough privileges in your Azure AAD to be able to succesfully create a Service Principal.
+You need to have enough privileges in your Azure AAD to be able to successfully create a Service Principal.
 
 Visit the [Azure Docs page](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest) for more information about Azure Service Principals creation.
 
@@ -115,7 +115,7 @@ The config settings for the Service Principal are the ones from the output of th
 
 ## Application Properties Configuration File
 
-Currently AzureWebAppSSLManager retrieves the list of certificates to generate and install from a json file stored in a blob storage accout.
+Currently AzureWebAppSSLManager retrieves the list of certificates to generate and install from a json file stored in a blob storage account.
 
 An example of the file structure can be found in the *[appproperties.json](../master/SampleJsonConfig/appproperties.json)* example file.
 
@@ -123,7 +123,7 @@ The file needs to be saved in a blob container with name as in the constant "App
 
 ## Certificate Information Configuration File
 
-The app retrieves some information neeed for the certificate creation from a json file stored in a blob storage accout.
+The app retrieves some information need for the certificate creation from a json file stored in a blob storage account.
 
 An example of the file structure can be found in the *[certinfo.json](../master/SampleJsonConfig/certinfo.json)* example file.
 
@@ -131,7 +131,7 @@ The file needs to be saved in a blob container with name as in the constant "Cer
 
 ## Limitations
 
-Currently an instance of AzureWebAppSSLManager can manage Web Apps and Function Apps in a single subscriptiont.
+Currently an instance of AzureWebAppSSLManager can manage Web Apps and Function Apps in a single subscription.
 If you need/want to manage App Service Web Apps  and Function Apps in multiple subscriptions, you would need to deploy one instance of this Function per subscription.
 
 ## Support
